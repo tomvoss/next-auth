@@ -214,7 +214,7 @@ const Adapter = (typeOrmConfig, options = {}) => {
           dateExpires.setTime(dateExpires.getTime() + sessionMaxAge)
           expires = dateExpires
         }
-
+ 
         const session = new Session(user.id, expires)
 
         return getManager().save(session)
